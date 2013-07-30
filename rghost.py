@@ -64,7 +64,7 @@ def upload(filename, upload_filename=None, upload_params=None):
 
 if __name__ == '__main__':
     import argparse
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(description=('Upload files to rghost.Note that when uploading multiple files with some options set, they are set for every file.'))
     upload_params_list = frozenset(['tags', 'description', 'removal_code', 'password', 'lifespan', 'public'])
     parser.add_argument('--tags', help='file tags, 10 at most, separate with commas.')
     parser.add_argument('--description', help='file description.')
