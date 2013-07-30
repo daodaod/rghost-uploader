@@ -81,4 +81,7 @@ if __name__ == '__main__':
     upload_params = {name:value for name,value in namespace._get_kwargs() if value is not None
                                                                    and name in upload_params_list}
     for filename in namespace.filename:
-        print upload(filename, upload_params=upload_params)
+        print upload(filename, upload_filename=namespace.upload_filename, upload_params=upload_params)
+        
+        
+        
